@@ -120,4 +120,13 @@
   <data name="InvalidCurrency" xml:space="preserve">
     <value>"Exception...Currency is mismatched"</value>
   </data>
+  <data name="InvalidInput" xml:space="preserve">
+    <value>"Exception...Number you entered is invalid "</value>
+  </data>
+  <data name="NullArgument" xml:space="preserve">
+    <value>"Exception...Argument is null"</value>
+  </data>
+  <data name="NullObject" xml:space="preserve">
+    <value>"Exception..Object is null"</value>
+  </data>
 </root>

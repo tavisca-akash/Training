@@ -8,41 +8,47 @@ namespace OperatorOverloading.Model
 {
     public class Money
     {
-
-      
-
+        private string _currency;
         //constructor to assign values
         public Money(double amount, string currency)
         {
            Amount = amount;
             Currency = currency;
         }
-
-        //properties 
-        public double Amount { get; set; }
-
-        public string Currency { get; set; }
-        
-
-        //constructor just to initalize object
         public Money()
         {
 
         }
 
-        //operator overloading  
+        //properties 
+        public double Amount { get; set; }
+
+        public string Currency
+        {
+            get;set;
+        }
+        
+
+        //constructor just to initalize object
+    //operator overloading  
         public static Money operator +(Money money1, Money money2)
         {
+            //If Object s null
+            if(money1.Equals("")||money2.Equals(""))
+                throw new NullReferenceException(Messages.NullObject);
+            if (money1.Equals("") || money2.Equals(""))
+            {
+                throw new ArgumentNullException(Messages.NullObject);
+            }
 
-            if (!string.Equals( money1.Currency,money2.Currency,StringComparison.CurrentCultureIgnoreCase))
+            if (String.Equals(money1.Currency, money2.Currency, StringComparison.OrdinalIgnoreCase) == false)
             {
                 throw new ArgumentException(Messages.InvalidCurrency);
             }
             
             return new Money(money1.Amount + money2.Amount, money1.Currency);
-
-
         }
+        
         public override string ToString()
         {
             return (String.Format("{0}  {1}", Amount, Currency));

@@ -17,29 +17,74 @@ namespace OperatorOverloading.Host
                 Money moneyObject = new Money();
 
                 //Take input First Amount
+
                 Console.WriteLine("Enter Amount");
                 if (Double.TryParse(Console.ReadLine(), out amountTemporary))
                     moneyObject.Amount = amountTemporary;
+                else
+                    throw new System.FormatException("Invalid Input Format");
+                Console.WriteLine("Enter Currency");
 
-                moneyObject.Currency = (Console.ReadLine());      
+                while (true)
+                {
+                    moneyObject.Currency = Console.ReadLine();
+                 
+                    if (moneyObject.Currency.Length != 3)
+                    {
+                        Console.WriteLine("Enter Correct Currency");
+                    }
+                    else
+                    {      
+                        break;
+                    }
+                
+                }
                 Money moneyObject1 = new Money(moneyObject.Amount, moneyObject.Currency);
-
                 ////Take input second Amount
-                moneyObject.Amount = Convert.ToDouble(Console.ReadLine());
-                moneyObject.Currency = (Console.ReadLine());
+
+                Console.WriteLine("Enter Amount");
+                if (double.TryParse(Console.ReadLine(), out amountTemporary))
+                    moneyObject.Amount = amountTemporary;
+                else
+                    throw new System.FormatException("Invalid Input");
+
+                Console.WriteLine("Enter currency");
+                while (true)
+                {
+                    moneyObject.Currency = Console.ReadLine();
+                 
+                    if (moneyObject.Currency.Length != 3)
+                    {
+                        Console.WriteLine("Enter Correct Currency");
+                    }
+                    else
+                    {      
+                        break;
+                    }
+                
+                }
+
                 Money moneyObject2 = new Money(moneyObject.Amount, moneyObject.Currency);
 
                 //call to opeartor overloading
+                
                 Money moneyObject3 = moneyObject1 + moneyObject2;
                 Console.WriteLine("First Amount :  {0}", moneyObject1);
                 Console.WriteLine("Second Amount:  {0}", moneyObject2);
                 Console.WriteLine("Total Money :  {0}", moneyObject3);
-            }   
+            }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Currency is mismatched....");
+                Console.WriteLine(e.Message);
             }
-
+            catch (FormatException e)
+            {
+                Console.WriteLine("Input format is invalid....");
+            }
+            catch(NullReferenceException e)
+            {
+                Console.WriteLine("Object refering to null....");
+            }
             
         }
     }

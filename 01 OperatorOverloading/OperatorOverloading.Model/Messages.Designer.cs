@@ -68,5 +68,32 @@ namespace OperatorOverloading.Model {
                 return ResourceManager.GetString("InvalidCurrency", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Exception...Number you entered is invalid &quot;.
+        /// </summary>
+        internal static string InvalidInput {
+            get {
+                return ResourceManager.GetString("InvalidInput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Exception...Argument is null&quot;.
+        /// </summary>
+        internal static string NullArgument {
+            get {
+                return ResourceManager.GetString("NullArgument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &quot;Exception..Object is null&quot;.
+        /// </summary>
+        internal static string NullObject {
+            get {
+                return ResourceManager.GetString("NullObject", resourceCulture);
+            }
+        }
     }
 }
