@@ -11,38 +11,36 @@ namespace OperatorOverloading.Host
         public static void Main(string[] args)
         {
 
+            double amountTemporary;
+            try
+            {
+                Money moneyObject = new Money();
 
-            Money monyObject = new Money();
+                //Take input First Amount
+                Console.WriteLine("Enter Amount");
+                if (Double.TryParse(Console.ReadLine(), out amountTemporary))
+                    moneyObject.Amount = amountTemporary;
+
+                moneyObject.Currency = (Console.ReadLine());      
+                Money moneyObject1 = new Money(moneyObject.Amount, moneyObject.Currency);
+
+                ////Take input second Amount
+                moneyObject.Amount = Convert.ToDouble(Console.ReadLine());
+                moneyObject.Currency = (Console.ReadLine());
+                Money moneyObject2 = new Money(moneyObject.Amount, moneyObject.Currency);
+
+                //call to opeartor overloading
+                Money moneyObject3 = moneyObject1 + moneyObject2;
+                Console.WriteLine("First Amount :  {0}", moneyObject1);
+                Console.WriteLine("Second Amount:  {0}", moneyObject2);
+                Console.WriteLine("Total Money :  {0}", moneyObject3);
+            }   
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("Currency is mismatched....");
+            }
+
             
-            //Take input Frst ammount
-            Console.WriteLine("Enter Ammount and currency");
-           
-            //split given line
-
-           String inputLine =(Console.ReadLine());
-           string[] inputSplit = inputLine.Split(' ');
-           monyObject.Ammount = Convert.ToDouble(inputSplit[0]);
-           monyObject.Currency = inputSplit[1];
-            
-            Money moneyObject1 = new Money(monyObject.Ammount, monyObject.Currency);
-
-            ////Take input Frst ammount
-            Console.WriteLine("Enter Ammount and currency to add");
-             inputLine = (Console.ReadLine());
-             inputSplit = inputLine.Split(' ');
-
-            monyObject.Ammount = Convert.ToDouble(inputSplit[0]);
-            monyObject.Currency = inputSplit[1];
-        
-
-            Money moneyObject2 = new Money(monyObject.Ammount, monyObject.Currency);
-
-            //call to opeartor overloading
-            Money moneyObject3 = moneyObject1 + moneyObject2;
-
-            Console.WriteLine("First Ammount :  {0}", moneyObject1);
-            Console.WriteLine("Second Ammount:  {0}", moneyObject2);
-            Console.WriteLine("Total Money :  {0}", moneyObject3);
         }
     }
 }

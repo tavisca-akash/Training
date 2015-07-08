@@ -9,41 +9,20 @@ namespace OperatorOverloading.Model
     public class Money
     {
 
-        double ammount;
-        string currency;
+      
 
         //constructor to assign values
-        public Money(double real, string imaginary)
+        public Money(double amount, string currency)
         {
-            this.ammount = real;
-            this.currency = imaginary;
+           Amount = amount;
+            Currency = currency;
         }
 
         //properties 
-        public double Ammount
-        {
-            get
-            {
-                return ammount;
-            }
-            set
-            {
-                ammount = value;
-            }
+        public double Amount { get; set; }
 
-        }
-        public string Currency
-        {
-            get
-            {
-                return currency;
-            }
-            set
-            {
-                currency = value;
-            }
-
-        }
+        public string Currency { get; set; }
+        
 
         //constructor just to initalize object
         public Money()
@@ -52,24 +31,21 @@ namespace OperatorOverloading.Model
         }
 
         //operator overloading  
-        public static Money operator +(Money m1, Money m2)
+        public static Money operator +(Money money1, Money money2)
         {
 
-            if (m1.currency != m2.currency)
+            if (!string.Equals( money1.Currency,money2.Currency,StringComparison.CurrentCultureIgnoreCase))
             {
-                return new Money(0,"Msmatch currency");
+                throw new ArgumentException(Messages.InvalidCurrency);
             }
-            if (m2.ammount<0)
-            {
-                return new Money(0, "Negatve number can not be added");
-            }
-            return new Money(m1.ammount + m2.ammount, m1.currency);
+            
+            return new Money(money1.Amount + money2.Amount, money1.Currency);
 
 
         }
         public override string ToString()
         {
-            return (String.Format("{0}  {1}", ammount, currency));
+            return (String.Format("{0}  {1}", Amount, Currency));
         }
     }
 }
