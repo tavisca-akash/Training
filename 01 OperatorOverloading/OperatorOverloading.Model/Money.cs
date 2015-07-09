@@ -19,11 +19,24 @@ namespace OperatorOverloading.Model
         public Money() { }
 
         //properties 
-        public double Amount { get; set; }
+        public double Amount { 
+            get; 
+            set;
+        }
 
         public string Currency
         {
-            get;set;
+            get
+            {
+                return _currency;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || value.Length != 3)
+                    throw new Exception();
+                else
+                    _currency = value;
+            }
         }
         
 
@@ -43,7 +56,8 @@ namespace OperatorOverloading.Model
             {
                 throw new Exception(Messages.CurrencyMismatch);
             }
-            
+            if (double.IsInfinity(money1.Amount + money2.Amount))
+                throw new Exception(Messages.DoubleOverflow);
             return new Money(money1.Amount + money2.Amount, money1.Currency);
         }
         

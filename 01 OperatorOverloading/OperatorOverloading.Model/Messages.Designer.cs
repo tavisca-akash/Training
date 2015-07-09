@@ -70,6 +70,15 @@ namespace OperatorOverloading.Model {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;Exception...Double value is overloaded&quot;.
+        /// </summary>
+        internal static string DoubleOverflow {
+            get {
+                return ResourceManager.GetString("DoubleOverflow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;Exception...Argument is null&quot;.
         /// </summary>
         internal static string NullArgument {

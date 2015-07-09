@@ -120,6 +120,9 @@
   <data name="CurrencyMismatch" xml:space="preserve">
     <value>"Exception...Currency is mismatched"</value>
   </data>
+  <data name="DoubleOverflow" xml:space="preserve">
+    <value>"Exception...Double value is overloaded"</value>
+  </data>
   <data name="NullArgument" xml:space="preserve">
     <value>"Exception...Argument is null"</value>
   </data>
