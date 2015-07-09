@@ -63,18 +63,9 @@ namespace OperatorOverloading.Model {
         /// <summary>
         ///   Looks up a localized string similar to &quot;Exception...Currency is mismatched&quot;.
         /// </summary>
-        internal static string InvalidCurrency {
+        internal static string CurrencyMismatch {
             get {
-                return ResourceManager.GetString("InvalidCurrency", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception...Number you entered is invalid &quot;.
-        /// </summary>
-        internal static string InvalidInput {
-            get {
-                return ResourceManager.GetString("InvalidInput", resourceCulture);
+                return ResourceManager.GetString("CurrencyMismatch", resourceCulture);
             }
         }
         
@@ -88,11 +79,11 @@ namespace OperatorOverloading.Model {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception..Object is null&quot;.
+        ///   Looks up a localized string similar to &quot;Exception..Object is Referring to null&quot;.
         /// </summary>
-        internal static string NullObject {
+        internal static string NullReference {
             get {
-                return ResourceManager.GetString("NullObject", resourceCulture);
+                return ResourceManager.GetString("NullReference", resourceCulture);
             }
         }
     }

@@ -9,16 +9,14 @@ namespace OperatorOverloading.Model
     public class Money
     {
         private string _currency;
+
         //constructor to assign values
         public Money(double amount, string currency)
         {
-           Amount = amount;
+            Amount = amount;
             Currency = currency;
         }
-        public Money()
-        {
-
-        }
+        public Money() { }
 
         //properties 
         public double Amount { get; set; }
@@ -35,23 +33,23 @@ namespace OperatorOverloading.Model
         {
             //If Object s null
             if(money1.Equals("")||money2.Equals(""))
-                throw new NullReferenceException(Messages.NullObject);
+                throw new NullReferenceException(Messages.NullReference);
             if (money1.Equals("") || money2.Equals(""))
             {
-                throw new ArgumentNullException(Messages.NullObject);
+                throw new ArgumentNullException(Messages.NullArgument);
             }
 
             if (String.Equals(money1.Currency, money2.Currency, StringComparison.OrdinalIgnoreCase) == false)
             {
-                throw new ArgumentException(Messages.InvalidCurrency);
+                throw new Exception(Messages.CurrencyMismatch);
             }
             
             return new Money(money1.Amount + money2.Amount, money1.Currency);
         }
         
         public override string ToString()
-        {
-            return (String.Format("{0}  {1}", Amount, Currency));
-        }
-    }
+       {
+          return (String.Format("{0}  {1}", Amount, Currency));
+       }
+  }
 }
