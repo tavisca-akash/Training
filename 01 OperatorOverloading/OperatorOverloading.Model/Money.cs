@@ -9,6 +9,7 @@ namespace OperatorOverloading.Model
     public class Money
     {
         private string _currency;
+        private double _amount;
 
         //constructor to assign values
         public Money(double amount, string currency)
@@ -19,9 +20,16 @@ namespace OperatorOverloading.Model
         public Money() { }
 
         //properties 
-        public double Amount { 
-            get; 
-            set;
+        public double Amount {
+            get
+            {
+                return _amount;
+            }
+            set
+            {
+                if (double.IsInfinity(_amount))
+                    throw new Exception(Messages.DoubleOverflow);
+            }
         }
 
         public string Currency
@@ -33,7 +41,7 @@ namespace OperatorOverloading.Model
             set
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length != 3)
-                    throw new Exception();
+                    throw new ArgumentNullException();
                 else
                     _currency = value;
             }
