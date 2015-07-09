@@ -10,7 +10,7 @@ namespace OperatorOverloading.Host
     {
         public static void Main(string[] args)
         {
-            Program programObject=new Program();
+           // Program programObject=new Program();
             string amountTemporary;
             string currencyTemporary;
             try
@@ -20,18 +20,18 @@ namespace OperatorOverloading.Host
                 //Take input First Amount
 
                 Console.WriteLine("Enter Amount");
-                moneyObject.Amount =programObject.ValidateInputAmount();
+                moneyObject.Amount =ValidateInputAmount();
                 
                 Console.WriteLine("Enter Currency");
-                moneyObject.Currency = programObject.ValidateInputCurrency();
+                moneyObject.Currency = ValidateInputCurrency();
                
                 Money moneyObject1 = new Money(moneyObject.Amount, moneyObject.Currency);
 
                 Console.WriteLine("Enter Amount");
-                moneyObject.Amount =programObject.ValidateInputAmount();
+                moneyObject.Amount =ValidateInputAmount();
 
                 Console.WriteLine("Enter Currency");
-                moneyObject.Currency =programObject.ValidateInputCurrency();
+                moneyObject.Currency =ValidateInputCurrency();
               
                 Money moneyObject2 = new Money(moneyObject.Amount, moneyObject.Currency);
 
@@ -49,7 +49,7 @@ namespace OperatorOverloading.Host
            
             
         }
-        public double ValidateInputAmount()
+        public static double ValidateInputAmount()
         {
             double amountTemporary;
             if (Double.TryParse(Console.ReadLine(), out amountTemporary)==false)       
@@ -61,7 +61,7 @@ namespace OperatorOverloading.Host
             else
                 return amountTemporary;
         }
-        public string ValidateInputCurrency()
+        public static string ValidateInputCurrency()
         {
            string currencyTemporary = Console.ReadLine();
             if (currencyTemporary.Length != 3)

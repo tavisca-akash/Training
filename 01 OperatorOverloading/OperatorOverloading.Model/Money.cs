@@ -32,7 +32,7 @@ namespace OperatorOverloading.Model
         public static Money operator +(Money money1, Money money2)
         {
             //If Object s null
-            if(money1.Equals("")||money2.Equals(""))
+            if (Object.ReferenceEquals(money1, null) || Object.ReferenceEquals(money2, null))
                 throw new NullReferenceException(Messages.NullReference);
             if (money1.Equals("") || money2.Equals(""))
             {
