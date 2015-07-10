@@ -8,32 +8,12 @@ namespace OperatorOverloading.dbl
 {
     public class Conversion : IParser
     {
-        static string[] initialseperatedData;
-        static string[] currencySeperatedData;
+        static string[] initialseperatedString;
+        static string[] currencySeperatedString;
 
-        public double GetConversion(string sourceCurrency, string targetCurrency)
+        public double Converts(string sourceCurrency, string targetCurrency)
         {
-           
-            string line;
-            string completeData = "";
-
-            System.IO.StreamReader file =
-               new System.IO.StreamReader("D:\\Training\\01 OperatorOverloading\\OperatorOverloading.dbl\\Data.txt");
-            while ((line = file.ReadLine()) != null)
-            {
-                completeData += line;
-                
-            }
-            completeData = completeData.Replace('}','\0').Replace('\"','\0').Replace("USD","");
-          
-            file.Close();
-
-            initialseperatedData = completeData.Split('{');
-            initialseperatedData[0] = "";
-            initialseperatedData[1] = "";
-
-
-            currencySeperatedData = initialseperatedData[2].Split(',');
+            currencySeperatedString = FileParsing.ParsingData();
 
             double multiplier1 = getMultiplier(sourceCurrency);
             double multiplier2 = getMultiplier(targetCurrency);
@@ -44,24 +24,19 @@ namespace OperatorOverloading.dbl
 
         public static double getMultiplier(string currency)
         {
-
+            currency = currency.ToUpper();
             if (currency.Equals("USD"))
                 return 1;
             int j;
-            for (j = 0; j < currencySeperatedData.Length; j++)
+            for (j = 0; j < currencySeperatedString.Length; j++)
             {
-                if (currencySeperatedData[j].Contains(currency) == true)
+                if (currencySeperatedString[j].Contains(currency) == true)
                     break;
             }
-          
-            string[] finalSplit = currencySeperatedData[j].Split(':');
-            double multiplier = 0.0;
-            if (double.TryParse(currencySeperatedData[1], out multiplier) == false)
-                throw new Exception(Messages.InvalidParsing);
-
+            string[] finalSplit = currencySeperatedString[j].Split(':');
+            double multiplier = Convert.ToDouble(finalSplit[1]);
             return multiplier;
         }
-       
     }
 
 }

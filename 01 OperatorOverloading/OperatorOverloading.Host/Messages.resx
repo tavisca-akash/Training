@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="FileNotFound" xml:space="preserve">
-    <value>"Exception..File Not Found"</value>
+  <data name="InvalidCurrency" xml:space="preserve">
+    <value>"Exception...Invalid Currency"</value>
   </data>
   <data name="InvalidParsing" xml:space="preserve">
-    <value>"Exception...can not parse to double"</value>
+    <value>"Exception...Wrong Parsing"</value>
   </data>
 </root>

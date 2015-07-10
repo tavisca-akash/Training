@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OperatorOverloading.dbl {
+namespace OperatorOverloading.Host {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace OperatorOverloading.dbl {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OperatorOverloading.dbl.Messages", typeof(Messages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OperatorOverloading.Host.Messages", typeof(Messages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,16 @@ namespace OperatorOverloading.dbl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception..File Not Found&quot;.
+        ///   Looks up a localized string similar to &quot;Exception...Invalid Currency&quot;.
         /// </summary>
-        internal static string FileNotFound {
+        internal static string InvalidCurrency {
             get {
-                return ResourceManager.GetString("FileNotFound", resourceCulture);
+                return ResourceManager.GetString("InvalidCurrency", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception...can not parse to double&quot;.
+        ///   Looks up a localized string similar to &quot;Exception...Wrong Parsing&quot;.
         /// </summary>
         internal static string InvalidParsing {
             get {

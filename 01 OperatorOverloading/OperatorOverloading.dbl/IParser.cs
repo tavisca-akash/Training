@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ namespace OperatorOverloading.dbl
 {
     public interface IParser
     {
-       double GetConversion(string currency1, string currency2);
-        
+        double Converts(string currency1, string currency2);
+
     }
 }

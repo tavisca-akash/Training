@@ -14,46 +14,42 @@ namespace OperatorOverloading.Host
             Money money = new Money();
             string sourceCurrency;
             string targetCurrency;
-            try
-            {
 
-                Console.WriteLine("Enter Source Currency");
+               Console.WriteLine("Enter Source Currency in \"100 USD\" Format");
+               string temporaryString = Console.ReadLine();
 
-                if (IsValidCurrency(Console.ReadLine().ToUpper(), out sourceCurrency) == false)
-                    throw new Exception();
+               string[] splitInput = temporaryString.Split(' ');
+                double temporaryAmount;
+                 if((double.TryParse(splitInput[0],out temporaryAmount)==false))
+                     throw new Exception(Messages.InvalidParsing);
 
-                    Console.WriteLine("Enter Target Currency");
-                if(IsValidCurrency(Console.ReadLine().ToUpper(), out targetCurrency)==false)
-                    throw new Exception();
+                 Money money1=new Money( temporaryAmount,splitInput[1]);
+                
 
-                double ans = money.ConvertCurrency(sourceCurrency, targetCurrency);
-                Console.WriteLine(ans);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Console.WriteLine("Enter Target Currency");
+            if (IsValidCurrency(Console.ReadLine().ToUpper(), out targetCurrency) == false)
+                throw new Exception(Messages.InvalidCurrency);
+            Money money2 = new Money(targetCurrency);
+
+            double multiplier = money.ConvertCurrency(money1.Currency, money2.Currency);
+            Console.WriteLine(multiplier*money1.Amount);
         }
-        
         public static bool IsValidCurrency(string currency, out string Currency)
         {
             string temporarySourceCurrency = currency;
             while (true)
             {
-
                 if (temporarySourceCurrency.Length != 3)
                 {
-                     Console.WriteLine("Please Enter Correct Currency");
-                     temporarySourceCurrency = Console.ReadLine().ToUpper();
+                    Console.WriteLine("Please Enter Correct Currency");
+                    temporarySourceCurrency = Console.ReadLine().ToUpper();
                 }
                 else
                 {
-                      Currency = temporarySourceCurrency;
-                      return true;
+                    Currency = temporarySourceCurrency;
+                    return true;
                 }
-           }
-            //Currency = temporarySourceCurrency;
-            return false;
+            }
         }
     }
 }
