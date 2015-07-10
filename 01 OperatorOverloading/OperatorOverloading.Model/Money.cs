@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using OperatorOverloading.dbl;
 namespace OperatorOverloading.Model
 {
     public class Money
@@ -11,6 +11,8 @@ namespace OperatorOverloading.Model
         private string _currency;
         private double _amount;
 
+        Conversion conversion = new Conversion();
+        
         //constructor to assign values
         public Money(double amount, string currency)
         {
@@ -41,31 +43,35 @@ namespace OperatorOverloading.Model
             set
             {
                 if (string.IsNullOrWhiteSpace(value) || value.Length != 3)
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException(Messages.NullArgument);
                 else
                     _currency = value;
             }
         }
-        
+        //Only for call getConversion method of OPeratorOverloading.DBL
+        public double ConvertCurrency(string sourceCurrency, string targetCurrency)
+        {
+            return conversion.GetConversion(sourceCurrency,targetCurrency);
+        }
 
         //constructor just to initalize object
-    //operator overloading  
+        //operator overloading  
         public static Money operator +(Money money1, Money money2)
         {
-            //If Object s null
+            //If Object is null
+
             if (Object.ReferenceEquals(money1, null) || Object.ReferenceEquals(money2, null))
                 throw new NullReferenceException(Messages.NullReference);
-            if (money1.Equals("") || money2.Equals(""))
-            {
-                throw new ArgumentNullException(Messages.NullArgument);
-            }
+       
 
             if (String.Equals(money1.Currency, money2.Currency, StringComparison.OrdinalIgnoreCase) == false)
             {
                 throw new Exception(Messages.CurrencyMismatch);
             }
+
             if (double.IsInfinity(money1.Amount + money2.Amount))
                 throw new Exception(Messages.DoubleOverflow);
+
             return new Money(money1.Amount + money2.Amount, money1.Currency);
         }
         
