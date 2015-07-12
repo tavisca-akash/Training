@@ -1,9 +1,9 @@
-D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.csprojResolveAssemblyReference.cache
 D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.Model.dll
 D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.Model.pdb
+D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.dbl.dll
+D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.interfaces.dll
+D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.dbl.pdb
+D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.interfaces.pdb
+D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.csprojResolveAssemblyReference.cache
 D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.dll
 D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.pdb
-D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.Messages.resources
-D:\Training\01 OperatorOverloading\OperatorOverloading.Model\obj\Debug\OperatorOverloading.Model.csproj.GenerateResource.Cache
-D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.dbl.dll
-D:\Training\01 OperatorOverloading\OperatorOverloading.Model\bin\Debug\OperatorOverloading.dbl.pdb

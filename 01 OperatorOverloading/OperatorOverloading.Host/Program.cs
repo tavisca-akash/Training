@@ -14,29 +14,31 @@ namespace OperatorOverloading.Host
             Money money = new Money();
             string sourceCurrency;
             string targetCurrency;
+            Console.WriteLine("Enter Source Currency in \"100 USD\" Format");
+            string input = Console.ReadLine();
+       
+            string[] splitInput = input.Split(' ');
+            sourceCurrency = GetValidCurrency(splitInput[0]);
+            double temporaryAmount;
 
-               Console.WriteLine("Enter Source Currency in \"100 USD\" Format");
-               string temporaryString = Console.ReadLine();
+            if ((double.TryParse(splitInput[0], out temporaryAmount) == false))
+                throw new Exception();
 
-               string[] splitInput = temporaryString.Split(' ');
-                double temporaryAmount;
-                 if((double.TryParse(splitInput[0],out temporaryAmount)==false))
-                     throw new Exception(Messages.InvalidParsing);
+            Money money1 = new Money(temporaryAmount, splitInput[1]);
 
-                 Money money1=new Money( temporaryAmount,splitInput[1]);
-                
 
             Console.WriteLine("Enter Target Currency");
-            if (IsValidCurrency(Console.ReadLine().ToUpper(), out targetCurrency) == false)
-                throw new Exception(Messages.InvalidCurrency);
+            targetCurrency = GetValidCurrency(Console.ReadLine());
+
             Money money2 = new Money(targetCurrency);
 
-            double multiplier = money.ConvertCurrency(money1.Currency, money2.Currency);
-            Console.WriteLine(multiplier*money1.Amount);
+            double exchangedAmount = money.ConvertCurrency(money1.Amount,money1.Currency, money2.Currency);
+            Console.WriteLine(exchangedAmount);
         }
-        public static bool IsValidCurrency(string currency, out string Currency)
+        public static string GetValidCurrency(string currency)
         {
             string temporarySourceCurrency = currency;
+            string Currency;
             while (true)
             {
                 if (temporarySourceCurrency.Length != 3)
@@ -47,7 +49,7 @@ namespace OperatorOverloading.Host
                 else
                 {
                     Currency = temporarySourceCurrency;
-                    return true;
+                    return Currency;
                 }
             }
         }
