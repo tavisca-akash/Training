@@ -7,9 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Host", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Model", "01 OperatorOverloading\OperatorOverloading.Model\OperatorOverloading.Model.csproj", "{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.dbl", "01 OperatorOverloading\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj", "{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.DBL", "01 OperatorOverloading\OperatorOverloading.dbl\OperatorOverloading.DBL.csproj", "{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.interfaces", "01 OperatorOverloading\OperatorOverloading.interfaces\OperatorOverloading.interfaces.csproj", "{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 WebServer", "02 WebServer", "{07D149FC-999B-4395-B942-04469CF45703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer.cs", "02 WebServer\Program.cs\WebServer.cs.csproj", "{B4BCA63F-6688-4EC8-88DD-820DE05B986F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder", "NewFolder", "{B2537251-081F-4BD0-A111-1F7937AC1BFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Web", "03 Web", "{F73CA23C-D8D5-4BAB-8712-08DC832FDC9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webserver", "03 web\Program.cs\webserver.csproj", "{4B49A469-7925-499C-8490-9CE3DCA6C2B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +43,14 @@ Global
 		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BCA63F-6688-4EC8-88DD-820DE05B986F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BCA63F-6688-4EC8-88DD-820DE05B986F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BCA63F-6688-4EC8-88DD-820DE05B986F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BCA63F-6688-4EC8-88DD-820DE05B986F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B49A469-7925-499C-8490-9CE3DCA6C2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B49A469-7925-499C-8490-9CE3DCA6C2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B49A469-7925-499C-8490-9CE3DCA6C2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B49A469-7925-499C-8490-9CE3DCA6C2B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,5 +60,8 @@ Global
 		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
 		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
 		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
+		{B2537251-081F-4BD0-A111-1F7937AC1BFB} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
+		{B4BCA63F-6688-4EC8-88DD-820DE05B986F} = {07D149FC-999B-4395-B942-04469CF45703}
+		{4B49A469-7925-499C-8490-9CE3DCA6C2B3} = {F73CA23C-D8D5-4BAB-8712-08DC832FDC9E}
 	EndGlobalSection
 EndGlobal
