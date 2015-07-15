@@ -20,7 +20,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
+<<<<<<< HEAD
 [assembly: Guid("5764618b-5146-42ec-8264-d93f9edb6f85")]
+=======
+[assembly: Guid("43382a79-c916-45d3-93c4-5724e46b6789")]
+>>>>>>> currencyconvertor
 
 // Version information for an assembly consists of the following four values:
 //

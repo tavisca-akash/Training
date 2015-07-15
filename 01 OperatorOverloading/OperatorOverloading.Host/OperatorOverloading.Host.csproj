@@ -4,7 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<<<<<<< HEAD
     <ProjectGuid>{8110F642-7192-4199-A35A-FAA05A5B8A5E}</ProjectGuid>
+=======
+    <ProjectGuid>{53AD63FB-8F6B-4E35-9157-DBFD7B987346}</ProjectGuid>
+>>>>>>> currencyconvertor
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OperatorOverloading.Host</RootNamespace>
@@ -48,8 +52,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\OperatorOverloading.Model\OperatorOverloading.Model.csproj">
       <Project>{23d22a39-2418-456c-875c-ed6732fa7bc4}</Project>
+=======
+    <ProjectReference Include="..\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj">
+      <Project>{fe1df7a7-54c9-480a-9872-b309db70bab0}</Project>
+      <Name>OperatorOverloading.dbl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OperatorOverloading.Model\OperatorOverloading.Model.csproj">
+      <Project>{c700c677-5ac3-4f1e-8f2a-d231c2dd1546}</Project>
+>>>>>>> currencyconvertor
       <Name>OperatorOverloading.Model</Name>
     </ProjectReference>
   </ItemGroup>

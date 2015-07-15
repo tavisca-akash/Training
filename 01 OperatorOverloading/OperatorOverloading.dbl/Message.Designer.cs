@@ -22,14 +22,14 @@ namespace OperatorOverloading.dbl {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Messages1 {
+    internal class Message {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Messages1() {
+        internal Message() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace OperatorOverloading.dbl {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OperatorOverloading.dbl.Messages1", typeof(Messages1).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OperatorOverloading.dbl.Message", typeof(Message).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,11 @@ namespace OperatorOverloading.dbl {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception..File Not Found&quot;.
+        ///   Looks up a localized string similar to &quot;Currency is Invalid&quot;.
         /// </summary>
-        internal static string FileNotFound {
+        internal static string InvalidCurrency {
             get {
-                return ResourceManager.GetString("FileNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &quot;Exception...can not parse to double&quot;.
-        /// </summary>
-        internal static string InvalidParsing {
-            get {
-                return ResourceManager.GetString("InvalidParsing", resourceCulture);
+                return ResourceManager.GetString("InvalidCurrency", resourceCulture);
             }
         }
     }

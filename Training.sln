@@ -3,14 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 OperatorOverloading", "01 OperatorOverloading", "{9473AF12-79E4-4E6A-81C7-0CE040CC978B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Model", "01 OperatorOverloading\OperatorOverloading.Model\OperatorOverloading.Model.csproj", "{23D22A39-2418-456C-875C-ED6732FA7BC4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Host", "01 OperatorOverloading\OperatorOverloading.Host\OperatorOverloading.Host.csproj", "{53AD63FB-8F6B-4E35-9157-DBFD7B987346}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Host", "01 OperatorOverloading\OperatorOverloading.Host\OperatorOverloading.Host.csproj", "{8110F642-7192-4199-A35A-FAA05A5B8A5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.Model", "01 OperatorOverloading\OperatorOverloading.Model\OperatorOverloading.Model.csproj", "{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}"
 EndProject
 <<<<<<< HEAD
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.dbl", "01 OperatorOverloading\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj", "{F3A6C52C-D10D-4674-A640-B957686D23BB}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.dbl", "01 OperatorOverloading\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj", "{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}"
+>>>>>>> currencyconvertor
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCase", "TestCase\TestCase.csproj", "{7CDDA3E0-3E3B-4CEF-9F72-21EF7D6935CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading.interfaces", "01 OperatorOverloading\OperatorOverloading.interfaces\OperatorOverloading.interfaces.csproj", "{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}"
 EndProject
 =======
 >>>>>>> 76ad9eeceace4bef0963169efbc89ec7ecfea4c3
@@ -20,6 +24,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
 		{23D22A39-2418-456C-875C-ED6732FA7BC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23D22A39-2418-456C-875C-ED6732FA7BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23D22A39-2418-456C-875C-ED6732FA7BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,8 +44,32 @@ Global
 		{7CDDA3E0-3E3B-4CEF-9F72-21EF7D6935CD}.Release|Any CPU.Build.0 = Release|Any CPU
 =======
 >>>>>>> 76ad9eeceace4bef0963169efbc89ec7ecfea4c3
+=======
+		{53AD63FB-8F6B-4E35-9157-DBFD7B987346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AD63FB-8F6B-4E35-9157-DBFD7B987346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AD63FB-8F6B-4E35-9157-DBFD7B987346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AD63FB-8F6B-4E35-9157-DBFD7B987346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> currencyconvertor
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53AD63FB-8F6B-4E35-9157-DBFD7B987346} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
+		{C700C677-5AC3-4F1E-8F2A-D231C2DD1546} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
+		{FE1DF7A7-54C9-480A-9872-B309DB70BAB0} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
+		{37999C9A-122A-4C5D-9F16-E9A3CE3FF4C0} = {9473AF12-79E4-4E6A-81C7-0CE040CC978B}
 	EndGlobalSection
 EndGlobal

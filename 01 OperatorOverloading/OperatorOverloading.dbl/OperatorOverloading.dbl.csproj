@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F3A6C52C-D10D-4674-A640-B957686D23BB}</ProjectGuid>
+    <ProjectGuid>{FE1DF7A7-54C9-480A-9872-B309DB70BAB0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OperatorOverloading.dbl</RootNamespace>
@@ -39,21 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversion.cs" />
-    <Compile Include="IParser.cs" />
-    <Compile Include="FileParsing.cs" />
+    <Compile Include="CurrencyConversion.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Messages1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Messages1.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Messages1.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Messages1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\OperatorOverloading.interfaces\OperatorOverloading.interfaces.csproj">
+      <Project>{37999c9a-122a-4c5d-9f16-e9a3ce3ff4c0}</Project>
+      <Name>OperatorOverloading.interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 
+=======
+using OperatorOverloading.dbl;
+>>>>>>> currencyconvertor
 namespace OperatorOverloading.Model
 {
     public class Money
@@ -18,9 +22,21 @@ namespace OperatorOverloading.Model
         }
         public Money() { }
 
+<<<<<<< HEAD
         //properties 
         public double Amount { 
             get; 
+=======
+        public Money(String s)
+        {
+            Currency = s;
+        }
+
+        //properties 
+        public double Amount
+        {
+            get;
+>>>>>>> currencyconvertor
             set;
         }
 
@@ -38,6 +54,7 @@ namespace OperatorOverloading.Model
                     _currency = value;
             }
         }
+<<<<<<< HEAD
         
 
         //constructor just to initalize object
@@ -66,4 +83,38 @@ namespace OperatorOverloading.Model
           return (String.Format("{0}  {1}", Amount, Currency));
        }
   }
+=======
+
+        public double ConvertCurrency(double amount,string sourceCurrency, string targetCurrency)
+        {
+            CurrencyConversion conversion = new CurrencyConversion();
+            double exchangeRate = conversion.GetExchangeRate(sourceCurrency, targetCurrency);
+            return (amount * exchangeRate);
+        }
+       
+        //constructor just to initalize object
+        //operator overloading  
+        public static Money operator +(Money money1, Money money2)
+        {
+            //If Object s null
+            if ((money1==null) || (money2==null))
+                throw new NullReferenceException(Message.NullObject);
+         
+
+            if (String.Equals(money1.Currency, money2.Currency, StringComparison.OrdinalIgnoreCase) == false)
+            {
+                throw new Exception(Message.MoneyMismatch);
+            }
+
+            if (double.IsInfinity(money1.Amount + money2.Amount))
+                throw new Exception(Message.ValueOverflow);
+            return new Money(money1.Amount + money2.Amount, money1.Currency);
+        }
+
+        public override string ToString()
+        {
+            return (String.Format("{0}  {1}", Amount, Currency));
+        }
+    }
+>>>>>>> currencyconvertor
 }
