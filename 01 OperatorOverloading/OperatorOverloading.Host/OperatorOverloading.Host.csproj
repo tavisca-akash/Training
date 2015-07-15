@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -48,10 +53,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj">
+      <Project>{f3a6c52c-d10d-4674-a640-b957686d23bb}</Project>
+      <Name>OperatorOverloading.dbl</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OperatorOverloading.Model\OperatorOverloading.Model.csproj">
       <Project>{23d22a39-2418-456c-875c-ed6732fa7bc4}</Project>
       <Name>OperatorOverloading.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

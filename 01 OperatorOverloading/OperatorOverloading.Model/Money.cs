@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using OperatorOverloading.dbl;
 namespace OperatorOverloading.Model
 {
     public class Money
@@ -18,9 +18,14 @@ namespace OperatorOverloading.Model
         }
         public Money() { }
 
+        public Money(String s) {
+            Currency = s;
+        }
+
         //properties 
-        public double Amount { 
-            get; 
+        public double Amount
+        {
+            get;
             set;
         }
 
@@ -38,10 +43,14 @@ namespace OperatorOverloading.Model
                     _currency = value;
             }
         }
-        
 
+        public double ConvertCurrency(string currency1, string currency2)
+        {
+            Conversion conversion=new Conversion();
+            return conversion.Converts(currency1,currency2);
+        }
         //constructor just to initalize object
-    //operator overloading  
+        //operator overloading  
         public static Money operator +(Money money1, Money money2)
         {
             //If Object s null
@@ -60,10 +69,10 @@ namespace OperatorOverloading.Model
                 throw new Exception(Messages.DoubleOverflow);
             return new Money(money1.Amount + money2.Amount, money1.Currency);
         }
-        
+
         public override string ToString()
-       {
-          return (String.Format("{0}  {1}", Amount, Currency));
-       }
-  }
+        {
+            return (String.Format("{0}  {1}", Amount, Currency));
+        }
+    }
 }

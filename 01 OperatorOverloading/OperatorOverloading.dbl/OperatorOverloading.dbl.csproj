@@ -43,16 +43,16 @@
     <Compile Include="IParser.cs" />
     <Compile Include="FileParsing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Messages1.Designer.cs">
+    <Compile Include="Messages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Messages1.resx</DependentUpon>
+      <DependentUpon>Messages.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Messages1.resx">
+    <EmbeddedResource Include="Messages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Messages1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

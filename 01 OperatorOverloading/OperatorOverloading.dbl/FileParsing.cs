@@ -17,7 +17,7 @@ namespace OperatorOverloading.dbl
             System.IO.StreamReader file =
                new System.IO.StreamReader(@"D:\Training\01 OperatorOverloading\OperatorOverloading.dbl\Data.txt");
             if (file == null)
-                throw new Exception(Messages1.FileNotFound);
+                throw new Exception(Messages.FileNotFound);
             completeData = file.ReadToEnd();
             file.Close();
             finalData = completeData.Split('{', ',', '}');

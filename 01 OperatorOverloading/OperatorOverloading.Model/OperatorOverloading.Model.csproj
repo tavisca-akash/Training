@@ -53,6 +53,12 @@
       <LastGenOutput>Messages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj">
+      <Project>{f3a6c52c-d10d-4674-a640-b957686d23bb}</Project>
+      <Name>OperatorOverloading.dbl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
