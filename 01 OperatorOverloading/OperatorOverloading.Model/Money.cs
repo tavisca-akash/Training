@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 using OperatorOverloading.dbl;
 >>>>>>> currencyconvertor
+=======
+using OperatorOverloading.dbl;
+>>>>>>> OperatorOverloading
 namespace OperatorOverloading.Model
 {
     public class Money
@@ -23,6 +27,7 @@ namespace OperatorOverloading.Model
         public Money() { }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         //properties 
         public double Amount { 
             get; 
@@ -37,6 +42,16 @@ namespace OperatorOverloading.Model
         {
             get;
 >>>>>>> currencyconvertor
+=======
+        public Money(String s) {
+            Currency = s;
+        }
+
+        //properties 
+        public double Amount
+        {
+            get;
+>>>>>>> OperatorOverloading
             set;
         }
 
@@ -55,10 +70,18 @@ namespace OperatorOverloading.Model
             }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         
+=======
+>>>>>>> OperatorOverloading
 
+        public double ConvertCurrency(string currency1, string currency2)
+        {
+            Conversion conversion=new Conversion();
+            return conversion.Converts(currency1,currency2);
+        }
         //constructor just to initalize object
-    //operator overloading  
+        //operator overloading  
         public static Money operator +(Money money1, Money money2)
         {
             //If Object s null
@@ -77,8 +100,9 @@ namespace OperatorOverloading.Model
                 throw new Exception(Messages.DoubleOverflow);
             return new Money(money1.Amount + money2.Amount, money1.Currency);
         }
-        
+
         public override string ToString()
+<<<<<<< HEAD
        {
           return (String.Format("{0}  {1}", Amount, Currency));
        }
@@ -112,9 +136,14 @@ namespace OperatorOverloading.Model
         }
 
         public override string ToString()
+=======
+>>>>>>> OperatorOverloading
         {
             return (String.Format("{0}  {1}", Amount, Currency));
         }
     }
+<<<<<<< HEAD
 >>>>>>> currencyconvertor
+=======
+>>>>>>> OperatorOverloading
 }

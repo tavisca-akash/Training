@@ -42,12 +42,26 @@
     <Compile Include="CurrencyConversion.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OperatorOverloading.interfaces\OperatorOverloading.interfaces.csproj">
       <Project>{37999c9a-122a-4c5d-9f16-e9a3ce3ff4c0}</Project>
       <Name>OperatorOverloading.interfaces</Name>
     </ProjectReference>
+=======
+    <Compile Include="Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+>>>>>>> OperatorOverloading
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
