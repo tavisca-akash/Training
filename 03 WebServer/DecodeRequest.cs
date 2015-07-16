@@ -7,19 +7,19 @@ using System.Net.Sockets;
 using WebServer;
 namespace Program.cs
 {
-    public class Decoder1
+    public class DecodeRequest
     {
         private Socket _clientSocket;
         private string _contentPath;
         private Encoding _charEncoder = Encoding.UTF8;
 
-        public Decoder1(Socket clientSocket,string contentPath)
+        public DecodeRequest(Socket clientSocket,string contentPath)
         {
             _clientSocket = clientSocket;
             _contentPath = contentPath;
         }
        
-        public string DecodeRequest(Socket clientSocket)
+        public string RequestDecoder(Socket clientSocket)
         {
             var receivedBufferlen = 0;
             var buffer = new byte[10240];

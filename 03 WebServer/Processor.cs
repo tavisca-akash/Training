@@ -25,7 +25,7 @@ namespace WebServer
         }
         public void processRequest(string requestedFile )
         {
-            var listener = new System.Threading.Thread(() =>
+            var handler = new System.Threading.Thread(() =>
             {
                 ClientSocket.ReceiveTimeout = _timeout;
                 ClientSocket.SendTimeout = _timeout;
@@ -37,7 +37,6 @@ namespace WebServer
             int dotIndex = requestedFile.LastIndexOf('.') + 1;
             if (dotIndex > 0)
             {
-
                 if (FileHandler.DoesFileExists(requestedFile))    //If yes check existence of the file
                     SendResponse(ClientSocket, FileHandler.ReadFile(requestedFile), "200 Ok", GetTypeOfFile(registryKey, (_contentPath + requestedFile)));
                 else

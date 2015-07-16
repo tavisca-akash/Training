@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Program.cs;
 namespace WebServer
 {
     class Listener
@@ -23,23 +23,31 @@ namespace WebServer
             _contentPath = contentPath;
         }
 
-        public void AcceptRequest()
+        public void AcceptRequest(Socket clientSocket)
         {
-            Socket clientSocket = null;
+            Console.WriteLine("in listen");
             try
             {
                 // Create new thread to handle the request and continue to listen the socket.
                 
-                clientSocket = _serverSocket.Accept();
-                Decoder1 decoder = new Decoder1(clientSocket,_contentPath);
-                string requestString =decoder.DecodeRequest(clientSocket);
-                Console.WriteLine(requestString);
+                //clientSocket = _serverSocket.Accept();
+
+                DecodeRequest decoder = new DecodeRequest(clientSocket,_contentPath);
+
+                string requestString = decoder.RequestDecoder(clientSocket);
+
                 RequestParser requestParser = new RequestParser();
+
                 requestParser.Parser(requestString);
-                Console.WriteLine(requestParser.HttpProtocolVersion);
-                Processor processor = new Processor(clientSocket,_contentPath);
-                processor.RequestUrl(requestParser.HttpUrl);
-                Console.WriteLine("Client Connected To Serversss");
+
+                if (Queueue.queue.Count < 10)
+                {
+                    Queueue.queue.Enqueue(requestParser.HttpUrl);
+                    Console.WriteLine("in liten if");
+                }
+                /*Dispatcher dispatcher = new Dispatcher(clientSocket,_contentPath);
+                dispatcher.Disapach();*/
+              
                 
 
             }

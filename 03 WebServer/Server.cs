@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Program.cs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WebServer
 {
-    public class WebServer
+    public class Server
     {
         // check for already running
         private bool _running = false;
@@ -16,35 +17,51 @@ namespace WebServer
         private Encoding _charEncoder = Encoding.UTF8;
         private Socket _serverSocket;
         private string _contentPath;
-        public string HttpMethod;
-        public string HttpUrl;
-        public string HttpProtocolVersion;
+     
         private int _port;
-        public void InitializeSocket(int port, string contentPath)
+
+        public Server(int port, string contentPath)
         {
             _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            _serverSocket.Bind(new IPEndPoint(IPAddress.Any, port));
+            _serverSocket.Bind(new IPEndPoint(IPAddress.Any, _port));
             _serverSocket.Listen(10);    //no of request in queue
             _serverSocket.ReceiveTimeout = _timeout;
             _serverSocket.SendTimeout = _timeout;
             _running = true; //socket created
+
             _contentPath = contentPath;
             _port = port;
+            Console.WriteLine("constructor");
 
         }
         //create socket and initialization
 
-        public void Start(int port, string contentPath)
+        public void Start()
         {
+            Console.WriteLine("start");  
+            Socket clientSocket;
+            clientSocket = _serverSocket.Accept();
+
+            if(clientSocket.Connected==true)
+                Console.WriteLine("client connected");
+            else Console.WriteLine("not connected");
+
+            Listener listener = new Listener(_serverSocket, _contentPath);
+            Dispatcher dispatcher = new Dispatcher(clientSocket, _contentPath);
+           
             try
             {
-               
-                InitializeSocket(port, contentPath);
                 while (_running)
                 {
-                    Listener listener = new Listener(_serverSocket, _contentPath);
-                    Console.WriteLine("Server is created");
-                    listener.AcceptRequest();
+                    Console.WriteLine("while");
+                    Task.Factory.StartNew(() =>
+                    {
+                        dispatcher.Disapach();
+                    });
+                    Task.Factory.StartNew(() =>
+                    {
+                        listener.AcceptRequest(clientSocket);
+                    });  
                 }
             }
             catch

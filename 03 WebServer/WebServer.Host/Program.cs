@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
-using WebServer;
-namespace webserver.Model
+
+namespace WebServer.Host
 {
     class Program
     {
@@ -13,13 +13,13 @@ namespace webserver.Model
         {
             int port;
 
-            if(int.TryParse(ConfigurationManager.AppSettings["webserver-port"],out port)==false)
+            if (int.TryParse(ConfigurationManager.AppSettings["webserver-port"], out port) == false)
                 throw new Exception();
 
             string path = ConfigurationManager.AppSettings["virtual-directory"];
-            Server server = new Server(port, path);
+            Server server = new Server();
 
-            server.Start();
+            server.Start(port, path);
         }
     }
 }
