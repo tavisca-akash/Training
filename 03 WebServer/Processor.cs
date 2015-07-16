@@ -12,6 +12,7 @@ namespace WebServer
     public class Processor
     {
         RegistryKey registryKey = Registry.ClassesRoot;
+
         public Socket ClientSocket = null;
         private Encoding _charEncoder = Encoding.UTF8;
         private string _contentPath;
@@ -42,7 +43,7 @@ namespace WebServer
                 else
                     SendErrorResponce(ClientSocket);      // We don't support this extension.
             }
-            else   //find default file as index .htm of index.html
+            else   //find default file as index .html of index.html
             {
                 if (FileHandler.DoesFileExists("\\index.htm"))
                     SendResponse(ClientSocket, FileHandler.ReadFile("\\index.htm"), "200 Ok", "text/html");
