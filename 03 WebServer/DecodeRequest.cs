@@ -29,7 +29,7 @@ namespace Program.cs
             }
             catch (Exception)
             {
-                //Console.WriteLine("buffer full");
+                Console.WriteLine("buffer full");
                 Console.ReadLine();
             }
             return _charEncoder.GetString(buffer, 0, receivedBufferlen);

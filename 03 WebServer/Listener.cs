@@ -25,12 +25,9 @@ namespace WebServer
 
         public void AcceptRequest(Socket clientSocket)
         {
-            Console.WriteLine("in listen");
+        
             try
             {
-                // Create new thread to handle the request and continue to listen the socket.
-                
-                //clientSocket = _serverSocket.Accept();
 
                 DecodeRequest decoder = new DecodeRequest(clientSocket,_contentPath);
 
@@ -43,13 +40,9 @@ namespace WebServer
                 if (Queueue.queue.Count < 10)
                 {
                     Queueue.queue.Enqueue(requestParser.HttpUrl);
-                    Console.WriteLine("in liten if");
+               
                 }
-                /*Dispatcher dispatcher = new Dispatcher(clientSocket,_contentPath);
-                dispatcher.Disapach();*/
-              
-                
-
+         
             }
             catch(Exception e)
             {

@@ -18,12 +18,11 @@ namespace Program.cs
         }
         public void Disapach()
         {
-            Console.WriteLine("in dispatch");
             Processor processor = new Processor(_clientSocket, _contentPath);
             if (Queueue.queue.Count > 0)
             {
                 processor.RequestUrl(Queueue.queue.Dequeue());
-                Console.WriteLine("in dispatch if");
+               
             }
            
         }

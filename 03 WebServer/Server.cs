@@ -31,20 +31,16 @@ namespace WebServer
 
             _contentPath = contentPath;
             _port = port;
-            Console.WriteLine("constructor");
+           
 
         }
         //create socket and initialization
 
         public void Start()
         {
-            Console.WriteLine("start");  
+          
             Socket clientSocket;
             clientSocket = _serverSocket.Accept();
-
-            if(clientSocket.Connected==true)
-                Console.WriteLine("client connected");
-            else Console.WriteLine("not connected");
 
             Listener listener = new Listener(_serverSocket, _contentPath);
             Dispatcher dispatcher = new Dispatcher(clientSocket, _contentPath);
@@ -53,7 +49,7 @@ namespace WebServer
             {
                 while (_running)
                 {
-                    Console.WriteLine("while");
+                  
                     Task.Factory.StartNew(() =>
                     {
                         dispatcher.Disapach();
