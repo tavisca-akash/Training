@@ -1,6 +1,0 @@
-D:\Training\03 web\Program.cs\bin\Debug\Program.cs.exe.config
-D:\Training\03 web\Program.cs\bin\Debug\Program.cs.exe
-D:\Training\03 web\Program.cs\bin\Debug\Program.cs.pdb
-D:\Training\03 web\Program.cs\obj\Debug\Program.cs.csprojResolveAssemblyReference.cache
-D:\Training\03 web\Program.cs\obj\Debug\Program.cs.exe
-D:\Training\03 web\Program.cs\obj\Debug\Program.cs.pdb
