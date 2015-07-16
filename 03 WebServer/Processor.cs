@@ -18,12 +18,14 @@ namespace WebServer
         private string _contentPath;
         public FileHandler FileHandler;
         private int _timeout = 10;
+        
         public Processor(Socket clientSocket, string contentPath)
         {
             _contentPath = contentPath;
             ClientSocket = clientSocket;
             FileHandler = new FileHandler(_contentPath);
         }
+        
         public void processRequest(string requestedFile )
         {
             var handler = new System.Threading.Thread(() =>
@@ -33,6 +35,7 @@ namespace WebServer
                 RequestUrl(requestedFile);
             });
         }
+        
         public void RequestUrl(string requestedFile)
         {
             int dotIndex = requestedFile.LastIndexOf('.') + 1;

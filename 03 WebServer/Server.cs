@@ -49,7 +49,6 @@ namespace WebServer
             {
                 while (_running)
                 {
-                  
                     Task.Factory.StartNew(() =>
                     {
                         dispatcher.Disapach();
@@ -65,10 +64,8 @@ namespace WebServer
                 Console.WriteLine("Error in creating server socket");
                 Console.ReadLine();
 
-            }
-          
+            }          
         }
-
        public  void Stop()
         {
             _running = false;
