@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23D22A39-2418-456C-875C-ED6732FA7BC4}</ProjectGuid>
+    <ProjectGuid>{C1CC66A7-3CBF-4C62-B16C-2FC7DD277D0C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OperatorOverloading.Model</RootNamespace>
-    <AssemblyName>OperatorOverloading.Model</AssemblyName>
+    <RootNamespace>UnitTesting.TestClass</RootNamespace>
+    <AssemblyName>UnitTesting.TestClass</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,25 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Messages.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Messages.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Money.cs" />
+    <Compile Include="IgnoreAttribute.cs" />
+    <Compile Include="MultiClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Messages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\OperatorOverloading.dbl\OperatorOverloading.dbl.csproj">
-      <Project>{f3a6c52c-d10d-4674-a640-b957686d23bb}</Project>
-      <Name>OperatorOverloading.dbl</Name>
-    </ProjectReference>
+    <Compile Include="TestCategoryAttribute.cs" />
+    <Compile Include="TestClassAttribute.cs" />
+    <Compile Include="TestMethodAttribute.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
