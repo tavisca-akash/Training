@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html">
+<head>
+    <title>TicTacToe</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="button" class="buttons" id="1" onclick="play('1')" /></td>
+            <td>
+                <input type="button" class="buttons" id="2" onclick="play('2')" /></td>
+            <td>
+                <input type="button" class="buttons" id="3" onclick="play('3')" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" class="buttons" id="4" onclick="play('4')" /></td>
+            <td>
+                <input type="button" class="buttons" id="5" onclick="play('5')" />
+            </td>
+            <td>
+                <input type="button" class="buttons" id="6" onclick="play('6')" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" class="buttons" id="7" onclick="play('7')" /></td>
+            <td>
+                <input type="button" class="buttons" id="8" onclick="play('8')" /></td>
+            <td>
+                <input type="button" class="buttons" id="9" onclick="play('9')" /></td>
+        </tr>
+
+    </table>
+    <div class="result">
+        <div id="Winner"></div>
+        <button id="buttonReset" onclick="reset()">RESET GAME</button>
+    </div>
+    <script src="JavaScript.js"></script>
+</body>
+</html>
