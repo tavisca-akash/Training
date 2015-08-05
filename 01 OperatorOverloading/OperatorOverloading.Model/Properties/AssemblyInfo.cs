@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UnitTesting")]
+[assembly: AssemblyTitle("OperatorOverloading.Model")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("UnitTesting")]
+[assembly: AssemblyProduct("OperatorOverloading.Model")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6bd738dc-043f-4a63-aaef-3eb6a7fc8324")]
+[assembly: Guid("5764618b-5146-42ec-8264-d93f9edb6f85")]
 
 // Version information for an assembly consists of the following four values:
 //
