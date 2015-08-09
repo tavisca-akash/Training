@@ -1,0 +1,35 @@
+﻿@model Mvc__EMS.Models.Login
+
+@{
+    ViewBag.Title = "LoginView";
+}
+
+<h2>LoginView</h2>
+
+@using (@Html.BeginForm("LoginPage1", "Login"))
+{
+   
+<form action="/Login/LoginPage1"  method="post">
+          
+         <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+            </li>
+        </ol>
+        <input type="submit" value="Log in" />
+    </fieldset>
+        </form>
+}

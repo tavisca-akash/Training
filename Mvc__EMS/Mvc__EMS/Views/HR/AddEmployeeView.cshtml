@@ -1,0 +1,62 @@
+﻿@model Mvc__EMS.Models.AddEmployee
+
+@{
+    ViewBag.Title = "AddEmployeeView";
+}
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+            @Html.ActionLink("Add Employee", "SaveEmployee", "HR")
+     
+       
+            @Html.ActionLink("Add Remark", "AddRemark", "HR")
+      
+     
+            @Html.ActionLink("Contact", "Contact", "HR")
+       
+    </ul>
+</div>
+
+<h2>AddEmployeeView</h2>
+
+
+@using (Html.BeginForm("SaveEmployee", "HR")) {
+   
+    
+    <form action="/HR/SaveEmployee"  method="post">
+
+        <fieldset>
+            <legend>Add Employee</legend>
+            <ol>
+                <li>
+                    @Html.LabelFor(m => m.FirstName)
+                    @Html.TextBoxFor(m => m.FirstName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.LastName)
+                    @Html.TextBoxFor(m => m.LastName)
+                </li>
+                <li>
+                    @Html.LabelFor(m => m.Title)
+                    @Html.TextBoxFor(m => m.Title)
+                </li>
+
+                <li>
+                    @Html.LabelFor(m => m.Email)
+                    @Html.TextBoxFor(m => m.Email)
+                </li>
+
+                <li>
+                    @Html.LabelFor(m => m.Phone)
+                    @Html.TextBoxFor(m => m.Phone)
+                </li>
+
+
+
+            </ol>
+            <input type="submit" value="Submit" />
+        </fieldset>
+    </form>
+    
+   
+}

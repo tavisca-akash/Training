@@ -1,0 +1,25 @@
+﻿@model Mvc__EMS.Models.HRProfile
+
+@{
+    ViewBag.Title = "HRProfileView";
+}
+
+<h2>HRProfileView</h2>
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+            @Html.ActionLink("Add Employee", "SaveEmployee", "HR")
+     
+       
+            @Html.ActionLink("Add Remark", "AddRemark", "HR")
+      
+     
+            @Html.ActionLink("Contact", "Contact", "HR")
+
+           
+       
+    </ul>
+</div>
+@using (Html.BeginForm("HRProfile", "HR"))
+{
+}

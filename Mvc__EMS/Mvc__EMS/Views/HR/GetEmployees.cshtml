@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Mvc__EMS.Models.EmployeeModel>
+
+@{
+    ViewBag.Title = "EmployeeeView";
+    WebGrid grid = new WebGrid(rowsPerPage: 1,canPage:true);
+    grid.Bind(source: Model, rowCount: 3, autoSortAndPage: false);
+}
+
+<h2>EmployeeeView</h2>
+
+@grid.GetHtml(columns: new []{
+    grid.Column("Text"),
+    grid.Column("CreateTimeStamps")
+    
+})

@@ -1,0 +1,48 @@
+﻿@model Mvc__EMS.Models.AddRemark
+
+@{
+    ViewBag.Title = "AddRemarkView";
+}
+
+<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+
+            @Html.ActionLink("Add Employee", "SaveEmployee", "HR")
+     
+       
+            @Html.ActionLink("Add Remark", "AddRemark", "HR")
+      
+     
+            @Html.ActionLink("Contact", "Contact", "HR")
+       
+    </ul>
+</div>
+
+<h2>AddRemarkView</h2>
+
+@using (@Html.BeginForm("SaveRemark", "HR"))
+{
+    <form action="/Hr/SaveRemark"  method="post">
+
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+   
+            <fieldset>
+                <legend></legend>
+                <ol>
+                <li>
+                    @Html.Label("Select Employee")
+                </li>
+                
+                <li>
+                @Html.DropDownList("Employee",ViewData["EmpList"] as List<SelectListItem>)
+                @Html.TextBoxFor(m => m.Remark)
+                @Html.ValidationMessageFor(m => m.Remark)
+                   </li> 
+            </ol>
+                <input type="submit" value="Submit"/>
+            </fieldset>
+        </form>
+
+}
+@* <form action="/HR/SaveRemarks" method="post"> </form>*@
