@@ -2,8 +2,8 @@
 
 @{
     ViewBag.Title = "EmployeeeView";
-    WebGrid grid = new WebGrid(rowsPerPage: 1,canPage:true);
-    grid.Bind(source: Model, rowCount: 3, autoSortAndPage: false);
+    WebGrid grid = new WebGrid(rowsPerPage: ViewBag.PageSize, canPage: true);
+    grid.Bind(source: Model, rowCount: ViewBag.TotalRemarks, autoSortAndPage: false);
 }
 
 <h2>EmployeeeView</h2>

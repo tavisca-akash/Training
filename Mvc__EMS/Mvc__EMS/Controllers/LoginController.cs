@@ -5,6 +5,7 @@ using Mvc__EMS.Models;
 using RollBasedAccess;
 using System;
 using WebMatrix.WebData;
+using System.Web.Security;
 
 
 namespace Mvc__EMS.Controllers
@@ -18,13 +19,14 @@ namespace Mvc__EMS.Controllers
         {
             return View();
         }
+        [AllowAnonymous]
         public ActionResult LoginPage(Login model)
         {
 
             return View("LoginView");
         }
-        [HttpPost ]
-        public ActionResult LoginPage1(Login model)
+       [HttpPost]
+        public ActionResult Authenticate(Login model)
         {
            
             Credentials credential = new Credentials();
@@ -34,19 +36,16 @@ namespace Mvc__EMS.Controllers
             if (res.Status.StatusCode == "200")
             {
 
-                HttpCookie cookie = new HttpCookie("Cookie");
-                cookie["UserName"] = credential.EmailId;
-                cookie["Title"] = res.Employee.Title;
-                cookie.Expires.AddDays(30);
-                HttpContext.Response.Cookies.Add(cookie);
-
-                ViewBag.MyCookie = cookie;
-                
-                    if (string.Equals(res.Employee.Title, "Hr", StringComparison.CurrentCultureIgnoreCase))
+                FormsAuthentication.SetAuthCookie(model.UserName.Trim(), false);
+                FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, model.UserName.Trim(), DateTime.UtcNow, DateTime.UtcNow.AddMinutes(10), false, res.Employee.Title.Trim());
+                HttpCookie cookie = new HttpCookie(FormsAuthentication.FormsCookieName, FormsAuthentication.Encrypt(ticket));
+                Response.Cookies.Add(cookie);
+                    if(string.Equals(res.Employee.Title, "Hr", StringComparison.CurrentCultureIgnoreCase))
                         return RedirectToAction("HRProfile", "HR");
                     else
                     {
                         TempData["Id"] = res.Employee.Id;
+                        Session["Idd"] = res.Employee.Id;
                         return RedirectToAction("GetEmployees", "HR");
                     }
                 

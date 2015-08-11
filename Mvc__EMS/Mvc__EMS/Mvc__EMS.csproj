@@ -197,6 +197,7 @@
     <Compile Include="Models\EmployeeModels.cs" />
     <Compile Include="Models\HrModels.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="MyProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -271,7 +272,9 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -315,7 +318,6 @@
     <Content Include="Views\HR\AddRemarkView.cshtml" />
     <Content Include="Views\HR\SaveEmployeeeView.cshtml" />
     <Content Include="Views\HR\HRProfileView.cshtml" />
-    <Content Include="Views\HR\EmployeeView.cshtml" />
     <Content Include="Views\HR\GetEmployees.cshtml" />
   </ItemGroup>
   <ItemGroup>

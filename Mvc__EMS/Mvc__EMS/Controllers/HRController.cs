@@ -14,18 +14,19 @@ namespace Mvc__EMS.Controllers
     {
         //
         // GET: /HR/
-
+        
         public ActionResult Index()
         {
             return View();
         }
-
+       [Authorize(Roles = "Hr")]
         public ActionResult GotoAddEmployee(AddEmployee model)
         {
           
             return View("AddEmployeeView");
            
         }
+       [Authorize(Roles = "Hr")]
         public ActionResult SaveEmployee(Employee employee)
         {
             if (ModelState.IsValid)
@@ -38,13 +39,17 @@ namespace Mvc__EMS.Controllers
                 return RedirectToAction("LoginPage","Login");
             }
         }
+
+        [Authorize(Roles = "Hr")]
         public ActionResult HRProfile(Employee employee)
         {
 
-            
+            //if(!Request.Form["UserName"].Equals(""))
                 return View("HRProfileView");
+            //return RedirectToAction("LoginPAge","Logn");
             
         }
+      [Authorize(Roles = "Hr")]
         public ActionResult AddRemark(AddEmployee model)
         {
             GetAllEmployee response = GetAllEmployee.GetAllEmployeeDetails();
@@ -61,6 +66,8 @@ namespace Mvc__EMS.Controllers
             
             return View("AddRemarkView");
         }
+
+     [Authorize(Roles = "Hr")]
         public ActionResult SaveRemark(AddRemark model)
         {
             Remark remark = new Remark();
@@ -71,26 +78,30 @@ namespace Mvc__EMS.Controllers
             return View("HRProfileView");
         }
 
-
-        public ActionResult GetEmployees(EmployeeModel model)
+         [Authorize(Roles = "Employee")]
+        public ActionResult GetEmployees(EmployeeModel model,int page=1)
         {
             EmployeeModel emp = new EmployeeModel();
-            int id = int.Parse(TempData["Id"].ToString());
-            var response =EmployeeResponse.GetAllRemarks(id,2);
+              
+           int   id= int.Parse(Session["Idd"].ToString());
+
+           int totalPages;
+           int pageSize = 3;
+           var response = EmployeeResponse.GetAllRemarks(id,page);
+           var responseRemark= RemarkCount.TotalRemarks(id);
+           int totalRemarks = int.Parse(responseRemark.totalRemark);
+           totalPages = (totalRemarks / pageSize) + ((totalRemarks % pageSize) > 0 ? 1 : 0);
             List<EmployeeModel> listEmployee = new List<EmployeeModel>();
-
-            int totalPages = 2;
-            int pageSize = 2;
-
-            foreach (var remark in response.Employee.Remarks)
+         foreach (var remark in response.Employee.Remarks)
             {
                 emp = new EmployeeModel();
                 emp.Text = remark.Text;
                 emp.CreateTimeStamps = remark.CreateTimeStamp.ToString();
                 listEmployee.Add(emp);
             }
-            ViewBag.TotalRows = pageSize;
-            ViewBag.PageSize = totalPages;
+            ViewBag.totalPages = totalPages;
+            ViewBag.TotalRemarks = totalRemarks;
+            ViewBag.PageSize = 2;
             var data = listEmployee;
             return View(data);
         }

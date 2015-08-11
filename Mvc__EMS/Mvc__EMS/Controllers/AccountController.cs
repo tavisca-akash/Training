@@ -52,9 +52,21 @@ namespace Mvc__EMS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
-            WebSecurity.Logout();
+           // WebSecurity.Logout();
+            try
+            {
+                Session.Abandon();
+                HttpCookie cookies = System.Web.HttpContext.Current.Request.Cookies[FormsAuthentication.FormsCookieName];
+                cookies.Expires = DateTime.Now.AddDays(-1);
+                System.Web.HttpContext.Current.Response.Cookies.Add(cookies);
+            }
+            catch (Exception ex)
+            {
+            }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("LoginPage", "Login");   
+
+           // return RedirectToAction("Index", "Home");
         }
 
         //
