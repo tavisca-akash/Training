@@ -1,0 +1,11 @@
+﻿.circle {
+  display: block;
+  background: black;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position:relative;
+  margin: 0;
+   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+ 
+}
