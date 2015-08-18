@@ -1,0 +1,209 @@
+
+<!-- saved from url=(0061)https://public.msrtcors.com/ticket_booking/ticket_booking.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./__ MSRTC __ Online Reservation System_files/styles_new.css">
+<script type="text/javascript" src="./__ MSRTC __ Online Reservation System_files/common.js"></script> 
+
+
+
+	
+	<title> :: MSRTC :: Online Reservation System</title>
+	<link rel="stylesheet" type="text/css" href="./__ MSRTC __ Online Reservation System_files/styles_new.css">
+    	<link rel="icon" type="image/jpg" href="https://public.msrtcors.com/favicon_ico.JPG">  
+<link rel="stylesheet" href="./__ MSRTC __ Online Reservation System_files/dhtmlwindow.css" type="text/css">
+<script type="text/javascript" src="./__ MSRTC __ Online Reservation System_files/dhtmlwindow.js"></script></head><body onload="focus();"><div id="dhtmlwindowholder"><span style="display:none">.</span></div>
+<link rel="stylesheet" href="./__ MSRTC __ Online Reservation System_files/modal.css" type="text/css">
+<script type="text/javascript" src="./__ MSRTC __ Online Reservation System_files/modal.js"></script><div id="interVeil"></div>
+
+  
+ 
+
+
+<table cellspacing="0" cellpadding="0" border="0" background="./__ MSRTC __ Online Reservation System_files/bannerbg.gif" width="980px" height="" align="center" bgcolor="#F5F6E4" style="background-repeat: no-repeat; margin-top:20px; border:2px solid #ffffff;">
+ 	<tbody><tr style="border-bottom-color :#FFFFFF">
+		<td align="center" colspan="" height="140px;" bgcolor="#e1e1e1" width="10%">
+		 	 <a href="http://www.msrtc.gov.in/" target="_blank">
+		 	 <img src="./__ MSRTC __ Online Reservation System_files/msrtc_logo.jpg" name="Rotating" id="Rotating2" width="120px;" height="120px;" border="0" alt="MSRTC" title="MSRTC"></a></td>
+		<td align="center" colspan="" height="140px;" bgcolor="#e1e1e1" width="70%">
+			  <img src="./__ MSRTC __ Online Reservation System_files/6.jpg" name="Rotating" id="Rotating1" width="810px;" height="120px;" style="border:1px solid #ffffff;" alt="MSRTC" title="MSRTC"></td>
+	</tr>
+
+<script language="JavaScript">
+var ImageArr1 = new Array(
+			"../images/1.jpg", 
+			"../images/2.jpg",
+			"../images/3.jpg", 
+			"../images/4.jpg", 
+			"../images/6.jpg"  );
+
+var ImageHolder1 = document.getElementById('Rotating1');
+var ImageArr2 = new Array("../images/msrtc_logo.jpg");
+var ImageHolder2 = document.getElementById('Rotating2');
+
+function RotateImages(whichHolder,Start)
+{
+	var a = eval("ImageArr"+whichHolder);
+	var b = eval("ImageHolder"+whichHolder);
+	if(Start >=a.length)
+		Start=0;
+		
+	b.src = a[Start];
+	//window.setTimeout("RotateImages("+whichHolder+","+(Start+1)+")",10000);
+}
+
+RotateImages(1,4);
+RotateImages(2,0);
+</script>
+
+
+
+
+ 	
+<tr height="300px">
+	<td valign="top" width="30%">
+	<table cellpadding="0" cellspacing="0" class="maintable" align="left" width="100%" valign="middle" border="1">
+		<tbody><tr>
+			<td class="tableh1" colspan="3">
+				<table cellspacing="0" cellpadding="0" width="100%">
+					<tbody><tr>
+						<td width="100%" class="labelBOLD">
+							Welcome <font color="Maroon">
+							Abhandwalkar</font></td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+	         		<td class="tablec" nowrap="" colspan="3">
+	               		<a href="./__ MSRTC __ Online Reservation System_files/__ MSRTC __ Online Reservation System.html"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/home.gif" style="border-color:#CCCCCC;" alt="" title="Home"></a>
+	                		<a href="./__ MSRTC __ Online Reservation System_files/__ MSRTC __ Online Reservation System.html"> Home</a></td>
+		</tr>
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+				<a href="javascript:openWin('../users/frmchange_pwd.php');"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/password.png" style="border-color:#CCCCCC;" alt="" title="Change Password"></a>
+				<a href="javascript:openWin('../users/frmchange_pwd.php');"> Change Password</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+				<a href="javascript:openWin('../users/frmeditProfile.php');"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/profile.gif" style="border-color:#CCCCCC;" alt="" title="View Profile"></a>
+				<a href="javascript:openWin('../users/frmeditProfile.php');">View Profile</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+				<a href="javascript:openWin('../users/frmpassenger.php');"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/profile.gif" style="border-color:#CCCCCC;" alt="" title="Passenger Master List"></a>
+				<a href="javascript:openWin('../users/frmpassenger.php');">Passenger Master List</a></td>
+		</tr>
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+			<a href="javascript:openWin('../users/my_tickets.php');"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/ticket.png" style="border-color:#CCCCCC;" alt="" title="My Tickets"></a>
+			<a href="javascript:openWin('../users/my_tickets.php');"> My Tickets</a></td>
+		</tr>
+		
+			<tr>
+			<td class="tablec" nowrap="" colspan="3">
+					<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="openbus();"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/bus4.jpg" height="17" width="17" style="border-color:#CCCCCC;" title="Bus Service station List"></a>
+				<a a="" style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="openbus();"> Bus Service station List</a></td>
+		</tr>
+		
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+		 		<a href="https://public.msrtcors.com/ticket_booking/Help.html" target="_blank"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/help.jpg" height="17" width="17" style="border-color:#CCCCCC;" title="help"></a>
+				<a href="https://public.msrtcors.com/ticket_booking/Help.html" target="_blank"> Help</a></td>
+		</tr>
+        <tr>
+			<td class="tablec" nowrap="" colspan="3">
+		 		<a href="javascript:openWin('../users/contactus.php');"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/contactus.jpg" height="17" width="17" style="border-color:#CCCCCC;" title="Contact Us"></a>
+				<a href="javascript:openWin('../users/contactus.php');"> Contact Us</a></td>
+		</tr>
+		
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+					<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="openfaq();"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/faq6.jpg" height="17" width="17" style="border-color:#CCCCCC;" title="FAQ"></a>
+				<a a="" style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="openfaq();"> Frequently Asked Questions</a></td>
+		</tr>
+		
+		<tr>
+			<td class="tablec" nowrap="" colspan="3">
+				<a href="https://public.msrtcors.com/logout.php"><img align="absmiddle" src="./__ MSRTC __ Online Reservation System_files/logout.png" height="17" width="17" style="border-color:#CCCCCC;" title="Logout"></a>
+				<a href="https://public.msrtcors.com/logout.php"> Logout</a></td>
+		</tr>
+	</tbody></table>
+</td>
+
+<script language="javascript">
+ 	function openWin(src1){
+		document.getElementById('frmMain1').src=src1;
+	}
+	
+	function openfaq(){
+		FileName = window.open("../users/faq.php", 'sdfsdf1', 'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=700,height=500,left = 462,top = 154');
+	}
+
+function openbus(){
+		FileName = window.open("../users/bus_station.php", 'sdfsdf2', 'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=450,height=450,left = 462,top = 154');
+	}
+</script>   
+	<td valign="top" height="80%" align="center" width="80%">
+	       
+		
+	<iframe name="frmMain1" id="frmMain1" src="./__ MSRTC __ Online Reservation System_files/final_tkt.html" width="100%" height="753" frameborder="0" scrolling="auto" bgcolor="#F5F6E4"> </iframe>		
+	
+	<form name="searchBus" method="post" action="https://www.billdesk.com/pgidsk/pgmerc/MSRTCPaymentoption.jsp">
+		<input type="hidden" name="txtCustomerID" id="txtCustomerID" value="">
+		<input type="hidden" name="txtTxnAmount" id="txtTxnAmount" value="">           
+		<input type="hidden" name="RU" id="RU" value="https://public.msrtcors.com/ticket_booking/pay_confirm.php">	
+        <input type="hidden" name="txtAdditionalInfo1" id="txtAdditionalInfo1" value="">	
+        <!--<input type="hidden" name="RU" id="RU" value="http://public.msrtcors.com/PublicORS/ticket_booking/pay_confirm.php" />-->   </form>
+	</td>
+</tr>
+<style>
+    div#no-js noscript { margin: 10px; padding: 10px;font-weight: bold; color: #000; }
+</style>
+<tr>
+	<td bgcolor="#e1e1e1" align="center" colspan="2" height="40">   
+		<font color="#000">
+		<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="return getAbout();">About Us</a>&nbsp; |&nbsp;
+  		<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="return getContact();">Contact Us</a>&nbsp; |&nbsp;
+		<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="return getPrivacyPolicy();">Privacy Policy</a>&nbsp;   | &nbsp;
+		<a style="cursor:pointer; text-decoration:underline; color:#0000FF; text-align:right;" onclick="return getTermsCond();">Terms of Use</a>&nbsp;
+		<font color="#000">2009, MSRTC. All rights reserved. Project implemented by 
+		<a href="http://www.trimax.in/" target="_blank" style="text-align:right;">Trimax IT Infrastructure &amp; Services Ltd. </a> </font><br> 
+		For best view use 1024x768 Screen Resolution.
+                <div id="no-js"><noscript> &lt;p&gt;JavaScript must be enabled to use this site. Please enable JavaScript in your browser and refresh the page.&lt;/p&gt; </noscript></div>
+		</font></td>
+</tr>   
+
+<script language="javascript">
+function getAbout(){
+	  window.open("../ticket_booking/About_Us.html", 'sdfsdf',  'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=680,height=500,left = 462,top = 154');
+}
+
+function getContact(){
+      window.open("../users/contactus.php", 'sdfsdf3',  'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=480,height=350,left = 462,top = 154');
+}
+	
+function getPrivacyPolicy(){
+	 FileName = window.open("../ticket_booking/Privacy_Policy.html", 'sdfsdf1', 'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=650,height=500,left = 462,top = 154');
+}
+		
+function getTermsCond(){
+	 FileName = window.open("../ticket_booking/Terms_conditions.html", 'sdfsdf2', 'dependent=yes,toolbar=0,scrollbars=1,location=0,statusbar=1,menubar=0,resizable=1,width=650,height=500,left = 462,top = 154');
+}
+</script>
+</tbody></table>
+
+<script type="text/javascript">
+	function printTic(){
+             frmMain1.focus();
+			 frmMain1.print();	
+			 location.href='https://public.msrtcors.com/PublicORS/ticket_booking/ticket_booking.php';
+	}	
+	function getHome(){
+			window.parent.location = "https://public.msrtcors.com/PublicORS/ticket_booking/ticket_booking.php";	
+	}
+</script>
+
+
+
+</body></html>
