@@ -1,0 +1,46 @@
+//    long end = System.currentTimeMillis() + 5000;
+        //while (System.currentTimeMillis() < end) {
+        //    WebElement resultsDiv = driver.findElement(By.className("gssb_e"));
+
+        //    // If results have been returned, the results are displayed in a drop down.
+        //    if (resultsDiv.isDisplayed()) {
+        //      break;
+        //    }
+        //}
+
+        // And now list the suggestions
+    
+  
+            
+            //--pop up
+            //FirefoxProfile fp = new FirefoxProfile();
+            //fp.SetPreference("browser.helperApps.neverAsk.saveToDisk","Application/ZIP");
+            //fp.SetPreference("browser.helperApps.neverAsk.force",false);
+           
+            
+            
+            
+            //----Screenshot
+
+            //var screen = "D:\\screenshot\\c1.Jpeg";
+            //Screenshot ss =((ITakesScreenshot) driver).GetScreenshot();
+            //ss.SaveAsFile(screen,ImageFormat.Jpeg);
+          
+            
+            //---Right Clck----
+
+            //Actions acton = new Actions(driver);
+            //IWebElement linkText = driver.FindElement(By.LinkText("Link Test"));
+            //acton.ContextClick(linkText).SendKeys(Keys.ArrowDown).SendKeys(Keys.Enter).Perform();
+
+
+            //--DropDoen-----
+
+            //var continents=driver.FindElement(By.Name("continents"));
+
+            //var selectIndex = new SelectElement(continents);
+            //selectIndex.SelectByIndex(3);
+            
+            //IWebElement uploadFilr = driver.FindElement(By.Id("photo"));
+            //uploadFilr.SendKeys("C:\\Users\\abhandwalkar\\Desktop\\yellow.css");
+            //driver.SwitchTo().Frame("content");
